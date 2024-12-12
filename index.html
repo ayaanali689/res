@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Date and Time</title>
+</head>
+<body>
+	<center><h1 style="background-color:#34495e; color: white; padding: 50px; margin: 0px;">RaqServer Nodes</h1></center>
+  <center><p id="datetime"></p>
+  <hr>
+  <center><p> <a href="https://www.googleapis.com/drive/v3/files/10joft8EJty_SNSFoc601Fx5IOftWcf15?alt=media&key=AIzaSyAWniO9ugDY51ZEdnh3JT30nP_sY92oYiE"style="text-decoration: none">RaavanMailer_v.8.6.3.zip</a></p>
+    <center><p> <a href="www.googleapis.com/drive/v3/files/1XBt75Zs52WUA1uNYDsqRLpjHmAjkWG13?alt=media&key=AIzaSyAWniO9ugDY51ZEdnh3JT30nP_sY92oYiE"style="text-decoration: none">RaavanMailer_v.8.6.4.zip</a></p>
+  <center><p> <a href="https://www.googleapis.com/drive/v3/files/1ENDyVyoBdVO6Lx2wt1lIUn9jC-8yoLiy?alt=media&key=AIzaSyAWniO9ugDY51ZEdnh3JT30nP_sY92oYiE"style="text-decoration: none">RaavanMailer_v.8.6.5.zip</a></p>
+  <center><p> <a href="https://www.googleapis.com/drive/v3/files/1rmxzSHOULCmmc6b35X5W4wrbosWq89kd?alt=media&key=AIzaSyCigcXovS7XuWdvQyDKKWgU4dc__yUxbk0"style="text-decoration: none">File recovery software.zip</a></p>
+
+  <script>
+    function formatDate() {
+      const options = { 
+        weekday: 'short', 
+        day: '2-digit', 
+        month: 'short', 
+        year: 'numeric', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit', 
+        hour12: true // 12-hour format with AM/PM
+      };
+      const now = new Date();
+      const formattedDate = now.toLocaleString('en-GB', options).replace(',', '');
+      return formattedDate;
+    }
+
+    function updateTime() {
+      document.getElementById('datetime').textContent = formatDate();
+    }
+
+    // Initial time update
+    updateTime();
+
+    // Update time every second
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>
